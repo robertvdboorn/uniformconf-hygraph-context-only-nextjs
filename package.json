@@ -3,11 +3,11 @@
   "version": "17.1.0",
   "private": true,
   "scripts": {
-    "dev:next": "next dev",
+    "dev:next": "next dev -p 8000",
     "build": "next build",
-    "prebuild": "generate:manifest",
+    "prebuild": "run-s generate:manifest",
     "dev": "run-s generate:manifest dev:next",
-    "start": "next start",
+    "start": "next start ",
     "generate:manifest": "uniform context manifest download --output ./lib/manifest.json",
     "lint": "next lint",
     "graphql-typings": "graphql-codegen --config codegen.yml"
